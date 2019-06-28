@@ -1,1 +1,1 @@
-export const name="Node.js Homework Application"
+export const name = "Node.js Homework Application";
