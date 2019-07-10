@@ -1,1 +1,1 @@
-export { CsvToJson } from './csvtojson';
+export { CsvToJson } from './csvtojson-converter';

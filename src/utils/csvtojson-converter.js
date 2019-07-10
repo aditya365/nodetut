@@ -1,9 +1,9 @@
 export function CsvToJson(csvData) {
   let rows = csvData.split("\n");
-  let headers = rows[0].replace("/\r/g", "").split(",");
+  let headers = rows[0].replace("\r", "").split(",");
   let output = [];
   rows.forEach((row, index) => {
-    row = row.replace("/\r/g", "");
+    row = row.replace("\r", "");
     if (index !== 0) {
       let fields = row.split(",");
       let object = {};

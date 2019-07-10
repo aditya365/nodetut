@@ -34,7 +34,11 @@ export class DirWatcher extends EventEmitter {
         }
       }
     } else {
-      for ( let i = 0; i < Math.max(filesArray.length, latestFilesArray.length);i++) {
+      for (
+        let i = 0;
+        i < Math.max(filesArray.length, latestFilesArray.length);
+        i++
+      ) {
         if (latestFilesArray[i] !== filesArray[i]) {
           element = filesArray[i] ? filesArray[i] : latestFilesArray[i];
         }

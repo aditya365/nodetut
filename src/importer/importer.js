@@ -4,7 +4,7 @@ import { CsvToJson } from "../utils";
 export class Importer {
   constructor(dirwatcher) {
     this.dirwatcher = dirwatcher;
-    this.path = "src/data";
+    this.path = "./data";
 
     this.dirwatcher.watch(this.path, 1000);
     this.dirwatcher.on("changed", filename => {
