@@ -15,13 +15,13 @@ export class DirWatcher extends EventEmitter {
         } else {
           //For changes in any files.
           files.forEach((file, index) => {
-            if (Date.now() - fs.statSync(path + "/" + file).mtimeMs < 1000) {
+            if (Date.now() - fs.statSync(`${path}/${file}`).mtimeMs < delay) {
               this.emit("changed", latestFiles[index]);
             }
           });
         }
       }
-      files = fs.readdirSync(path);
+      files = latestFiles;
     }, delay);
   }
 

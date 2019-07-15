@@ -1,6 +1,10 @@
 export function CsvToJson(csvData) {
   let rows = csvData.split("\n");
   let headers = rows[0].replace("\r", "").split(",");
+  return getDataFromCSV(rows, headers);
+}
+
+function getDataFromCSV(rows, headers) {
   let output = [];
   rows.forEach((row, index) => {
     row = row.replace("\r", "");
