@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "test": "",
+    "build.esm": "node -r esm src/index.js",
     "build.dev": "babel src --out-dir dist --env-name=dev && node dist/app.js",
     "build.test": "babel src --out-dir dist --env-name=test && node dist/app.js",
     "build.prod": "babel src --out-dir dist --env-name=prod && node dist/app.js"
