@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "test": "",
+    "build.esm": "node -r esm src/index.js",
     "build.dev": "babel src --out-dir dist --env-name=dev && node dist/app.js",
     "build.test": "babel src --out-dir dist --env-name=test && node dist/app.js",
     "build.prod": "babel src --out-dir dist --env-name=prod && node dist/app.js"
@@ -20,11 +21,16 @@
     "url": "https://github.com/aditya365/nodetut/issues"
   },
   "homepage": "https://github.com/aditya365/nodetut#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "yargs": "^13.2.4"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/register": "^7.4.4",
